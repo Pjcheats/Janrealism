@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:janrealism/constants/colors.dart';
 import 'package:janrealism/constants/text.dart';
 import 'package:janrealism/constants/textfiled.dart';
+import 'package:janrealism/controller/auth_controller.dart';
 
 class notifications extends StatefulWidget {
   const notifications({super.key});
@@ -40,7 +41,7 @@ class _notificationsState extends State<notifications> {
               const SizedBox(
                 height: 20,
               ),
-              text1("Blueist"),
+              text1("${AuthController.userName}"),
               const SizedBox(
                 height: 20,
               ),

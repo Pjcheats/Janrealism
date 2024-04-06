@@ -4,6 +4,7 @@ import 'package:janrealism/models/journalist_user_model.dart';
 import 'package:janrealism/service/firestore_service.dart';
 
 class AuthController extends GetxController {
+  static String userName = "";
   static Rx<String>? journalistUid;
   static Rx<JournalistUserModel>? authenticatedJournalist;
 

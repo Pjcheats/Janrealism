@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:janrealism/service/firestore_service.dart';
+import 'package:janrealism/splash.dart';
 import 'package:janrealism/view/login/login.dart';
 import 'package:uuid/uuid.dart';
 import 'firebase_options.dart';

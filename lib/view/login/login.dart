@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:janrealism/constants/button.dart';
+import 'package:janrealism/constants/colors.dart';
 import 'package:janrealism/controller/auth_controller.dart';
 import 'package:janrealism/service/firestore_service.dart';
 import 'package:janrealism/view/login/journalist_login.dart';

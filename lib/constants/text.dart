@@ -25,3 +25,11 @@ Widget text2(String text) {
         fontSize: 12, color: Colors.black45, fontWeight: FontWeight.w500),
   );
 }
+
+Widget text3(String text) {
+  return Text(
+    text,
+    style: GoogleFonts.poppins(
+        fontSize: 18, color: Colors.orange, fontWeight: FontWeight.bold),
+  );
+}
