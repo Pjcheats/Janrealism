@@ -19,58 +19,54 @@ class _LoginState extends State<Login> {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center
+          ,
           children: [
-            SizedBox(height: 650, child: Image.asset("assets/logo.jpg")),
-            Column(
+            SizedBox(height: 400, child: Image.asset("assets/full-logo.png")),
+            const Spacer(),
+            InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.fade,
+                          child: const Jourenal_login()));
+                },
+                child: button("Journalist Login")),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.fade,
-                              child: const Jourenal_login()));
-                    },
-                    child: button("Journalist Login")),
                 const SizedBox(
-                  height: 10,
+                  width: 80,
+                  child: Divider(
+                    color: Colors.black12,
+                  ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 85.0),
-                  child: Row(
-                    children: [
-                      const SizedBox(
-                        width: 80,
-                        child: Divider(
-                          color: Colors.black12,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text(
-                          "or",
-                          style: GoogleFonts.poppins(
-                              fontSize: 16,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 80,
-                        child: Divider(
-                          color: Colors.black12,
-                        ),
-                      ),
-                    ],
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  child: Text(
+                    "or",
+                    style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500),
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  width: 80,
+                  child: Divider(
+                    color: Colors.black12,
+                  ),
                 ),
-                button("User Login")
               ],
-            )
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            button("User Login")
           ],
         ),
       ),
