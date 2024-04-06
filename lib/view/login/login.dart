@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:janrealism/constants/button.dart';
+import 'package:janrealism/controller/auth_controller.dart';
+import 'package:janrealism/service/firestore_service.dart';
 import 'package:janrealism/view/login/journalist_login.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:uuid/uuid.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -12,6 +15,14 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+ 
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,18 +30,18 @@ class _LoginState extends State<Login> {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center
-          ,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: 400, child: Image.asset("assets/full-logo.png")),
             const Spacer(),
             InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
+                onTap: ()async {
+                
+                   Navigator.push(
+                     context,
                       PageTransition(
-                          type: PageTransitionType.fade,
-                          child: const Jourenal_login()));
+                           type: PageTransitionType.fade,
+                           child: const Jourenal_login()));
                 },
                 child: button("Journalist Login")),
             const SizedBox(

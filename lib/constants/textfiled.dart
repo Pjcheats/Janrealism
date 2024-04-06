@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:janrealism/constants/colors.dart';
 
-Widget textfielf(String text) {
+Widget textfiel(String text) {
   return Container(
     height: 60,
     width: 400,
