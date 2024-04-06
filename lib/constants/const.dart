@@ -48,7 +48,7 @@ class _const_screenState extends State<const_screen> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(width: 120, child: Image.asset("assets/logo.jpg")),
+              SizedBox(width: 120, child: Image.asset("assets/logo.png")),
               Row(
                 children: [
                   Container(
@@ -114,7 +114,7 @@ class _const_screenState extends State<const_screen> {
                 ),
               ),
               BottomNavigationBarItem(
-                label: "followes",
+                label: "followers",
                 icon: Icon(Icons.family_restroom_rounded),
               ),
               BottomNavigationBarItem(

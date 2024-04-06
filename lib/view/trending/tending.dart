@@ -55,6 +55,13 @@ Widget tile(
                       borderRadius: BorderRadius.all(Radius.circular(6))
                       //border: Border.all(color: MyColors.color2, width: 1),
                       ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(6)),
+                    child: Image.network(
+                      "https://images.news18.com/ibnlive/uploads/2023/11/ipl_2024_live_updates-2023-11-a9b6336a8f392bf8b04374ba46914130.jpg?impolicy=website&width=640&height=480",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
                 SizedBox(
                   width: 10,

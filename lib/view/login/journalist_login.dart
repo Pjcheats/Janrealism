@@ -26,7 +26,7 @@ class _Jourenal_loginState extends State<Jourenal_login> {
             Column(
               children: [
                 const SizedBox(height: 40),
-                SizedBox(height: 150, child: Image.asset("assets/logo.jpg")),
+                SizedBox(height: 150, child: Image.asset("assets/logo.png")),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
