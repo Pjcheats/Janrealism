@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:janrealism/constants/button.dart';
+import 'package:janrealism/constants/colors.dart';
 import 'package:janrealism/constants/const.dart';
 import 'package:janrealism/constants/text.dart';
 import 'package:janrealism/constants/textfiled.dart';
@@ -18,50 +19,65 @@ class _Jourenal_loginState extends State<Jourenal_login> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              "assets/bg.jpg",
+              fit: BoxFit.cover,
+            ),
+          ),
+          Positioned.fill(
+              child: Container(
+            color: MyColors.color3,
+          )),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const SizedBox(height: 40),
-                SizedBox(height: 150, child: Image.asset("assets/logo.png")),
-                const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                Column(
                   children: [
-                    text1("To Register give your Doc ID"),
+                    const SizedBox(height: 40),
+                    SizedBox(
+                        height: 150, child: Image.asset("assets/logo.png")),
+                    const SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        text1("To Register give your Doc ID"),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    textfielf("Doc ID"),
+                    const SizedBox(height: 30),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        text1("Here your user name.."),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    textfielf("Hidden User Name"),
                   ],
                 ),
-                const SizedBox(height: 10),
-                textfielf("Doc ID"),
-                const SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                Column(
                   children: [
-                    text1("Here your user name.."),
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              PageTransition(
+                                  type: PageTransitionType.fade,
+                                  child: const_screen()));
+                        },
+                        child: button("Generate keys")),
                   ],
-                ),
-                const SizedBox(height: 10),
-                textfielf("Hidden User Name"),
+                )
               ],
             ),
-            Column(
-              children: [
-                InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.fade,
-                              child: const_screen()));
-                    },
-                    child: button("Generate keys")),
-              ],
-            )
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
