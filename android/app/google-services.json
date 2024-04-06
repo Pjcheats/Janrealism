@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "667299927544",
+    "project_id": "janrealism-38b8f",
+    "storage_bucket": "janrealism-38b8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667299927544:android:e14e0b4710db037212b20d",
+        "android_client_info": {
+          "package_name": "com.example.janrealism"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmvlIMGzo08UQyB_d5KN_MClMEia8XShQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
