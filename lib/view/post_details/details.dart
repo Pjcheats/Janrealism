@@ -20,7 +20,7 @@ class _detailsState extends State<details> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(width: 120, child: Image.asset("assets/logo.jpg")),
+            SizedBox(width: 120, child: Image.asset("assets/logo.png")),
             Row(
               children: [
                 Container(
@@ -69,9 +69,9 @@ class _detailsState extends State<details> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
-                    width: 300,
+                    width: 250,
                     child: text1(
-                      "Monarch population soars 4,900 percent since last year in a two three thrilling 2021 western migration years",
+                      "Monarch population soars 4,900 percent since last year in three thrilling 2021 western migration years",
                     ),
                   ),
                   const Icon(
@@ -90,10 +90,13 @@ class _detailsState extends State<details> {
                   color: Colors.black12,
                   borderRadius: BorderRadius.circular(10),
                 ),
-                // child: ClipRRect(
-                //   borderRadius: BorderRadius.circular(10),
-                //   child: Image.network("", fit: BoxFit.cover),
-                // ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  child: Image.network(
+                    "https://images.news18.com/ibnlive/uploads/2023/11/ipl_2024_live_updates-2023-11-a9b6336a8f392bf8b04374ba46914130.jpg?impolicy=website&width=640&height=480",
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 20,
@@ -110,11 +113,19 @@ class _detailsState extends State<details> {
                         decoration: BoxDecoration(
                             color: Colors.black12,
                             borderRadius: BorderRadius.circular(100)),
+                        child: ClipRRect(
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(100)),
+                          child: Image.network(
+                            "https://pbs.twimg.com/profile_images/1765067352113381377/L8AJi0hq_400x400.jpg",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
                       ),
                       const SizedBox(
                         width: 10,
                       ),
-                      text2("By Andy Corbley"),
+                      text2("By Blueist"),
                     ],
                   )
                 ],

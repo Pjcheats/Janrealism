@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:janrealism/constants/button.dart';
+import 'package:janrealism/constants/colors.dart';
 import 'package:janrealism/constants/const.dart';
 import 'package:janrealism/constants/text.dart';
 import 'package:janrealism/constants/textfiled.dart';

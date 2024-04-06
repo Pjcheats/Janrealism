@@ -17,7 +17,7 @@ class _homeState extends State<home> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: ListView.builder(
           itemCount: 10,
           itemBuilder: (context, position) {
@@ -57,7 +57,7 @@ Widget tile(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
@@ -70,14 +70,22 @@ Widget tile(
                           borderRadius: BorderRadius.all(Radius.circular(100))
                           //border: Border.all(color: MyColors.color2, width: 1),
                           ),
+                      child: ClipRRect(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(100)),
+                        child: Image.network(
+                          "https://pbs.twimg.com/profile_images/1765067352113381377/L8AJi0hq_400x400.jpg",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 6,
                         ),
                         text1(text6),
@@ -86,7 +94,7 @@ Widget tile(
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Container(
@@ -97,11 +105,18 @@ Widget tile(
                       borderRadius: BorderRadius.all(Radius.circular(6))
                       //border: Border.all(color: MyColors.color2, width: 1),
                       ),
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.all(Radius.circular(6)),
+                    child: Image.network(
+                      "https://images.news18.com/ibnlive/uploads/2023/11/ipl_2024_live_updates-2023-11-a9b6336a8f392bf8b04374ba46914130.jpg?impolicy=website&width=640&height=480",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 6,
                     ),
                     text1(text6),
@@ -111,7 +126,7 @@ Widget tile(
               ],
             )),
       ),
-      Divider(
+      const Divider(
         color: MyColors.color2,
       )
     ],

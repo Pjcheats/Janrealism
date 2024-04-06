@@ -14,6 +14,36 @@ class _postState extends State<post> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        automaticallyImplyLeading: false,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(width: 120, child: Image.asset("assets/logo.png")),
+            Row(
+              children: [
+                const Icon(
+                  size: 25,
+                  Icons.search,
+                  color: MyColors.color2,
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.notifications,
+                    color: MyColors.color2,
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
@@ -21,11 +51,11 @@ class _postState extends State<post> {
             Row(
               children: [
                 tabtile("Add Heading"),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 tabtile("Add Artical"),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 tabtile("Add Media")
@@ -38,7 +68,7 @@ class _postState extends State<post> {
         onPressed: () {},
         backgroundColor: MyColors.color2,
         child: const Icon(
-          Icons.post_add,
+          Icons.add,
           color: Colors.white,
         ),
       ),
@@ -51,7 +81,7 @@ Widget tabtile(
 ) {
   return Container(
     height: 30,
-    decoration: BoxDecoration(
+    decoration: const BoxDecoration(
         color: MyColors.color2,
         borderRadius: BorderRadius.all(Radius.circular(6))
         //border: Border.all(color: MyColors.color2, width: 1),
