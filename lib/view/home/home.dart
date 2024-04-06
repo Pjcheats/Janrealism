@@ -18,20 +18,25 @@ class _homeState extends State<home> {
       backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: ListView.builder(
-          itemCount: 10,
-          itemBuilder: (context, position) {
-            return InkWell(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    PageTransition(
-                        type: PageTransitionType.fade, child: const details()));
-              },
-              child: tile("KKR Won the IPL 2024",
-                  "KKR, IPL champions in 2012 and 2014,"),
-            );
-          },
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Ink(
+                child: tile(
+                    "KKR Won the IPL 2024",
+                    "KKR, IPL champions in 2012 and 2014,",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKZg4mRksYG1rtqUxLTmDv0vvqtxCN9pAEpmqNwQmgSw&s"),
+              ),
+              tile(
+                  "Need to find the address issues",
+                  "of competitive exam aspirants: Sharad Pawar",
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRON9FAt-yz7crgmRbfRlLA4jgDAtKRttx34MY3rqiwxA&s"),
+              tile(
+                  "Russia evacuates 4,000 people ",
+                  "dam bursts, floods near Kazakh border",
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6XWZiECAU-2ZzFKl-xtnr7e1Mge5JXXRppBw6qy5Sw&s"),
+            ],
+          ),
         ),
       ),
     );
@@ -41,6 +46,7 @@ class _homeState extends State<home> {
 Widget tile(
   String text6,
   String text5,
+  String img,
 ) {
   return Column(
     children: [
@@ -108,7 +114,7 @@ Widget tile(
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(6)),
                     child: Image.network(
-                      "https://images.news18.com/ibnlive/uploads/2023/11/ipl_2024_live_updates-2023-11-a9b6336a8f392bf8b04374ba46914130.jpg?impolicy=website&width=640&height=480",
+                      img,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -126,9 +132,7 @@ Widget tile(
               ],
             )),
       ),
-      const Divider(
-        color: MyColors.color2,
-      )
+      const Divider(color: Colors.black12)
     ],
   );
 }
