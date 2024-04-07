@@ -84,13 +84,17 @@ class _notificationsState extends State<notifications> {
               const SizedBox(
                 height: 10,
               ),
-              tile("KKR Won the IPL 2024",
-                  "KKR, IPL champions in 2012 and 2014,"),
+              tile(
+                  "Need to find the address issues",
+                  "of competitive exam aspirants: Sharad Pawar",
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRON9FAt-yz7crgmRbfRlLA4jgDAtKRttx34MY3rqiwxA&s"),
               const SizedBox(
                 height: 10,
               ),
-              tile("KKR Won the IPL 2024",
-                  "KKR, IPL champions in 2012 and 2014,"),
+              tile(
+                  "KKR Won the IPL 2024",
+                  "KKR, IPL champions in 2012 and 2014,",
+                  "https://images.news18.com/ibnlive/uploads/2023/11/ipl_2024_live_updates-2023-11-a9b6336a8f392bf8b04374ba46914130.jpg?impolicy=website&width=640&height=480"),
             ],
           ),
         ),
@@ -102,6 +106,7 @@ class _notificationsState extends State<notifications> {
 Widget tile(
   String text6,
   String text5,
+  String img,
 ) {
   return Column(
     children: [
@@ -169,7 +174,7 @@ Widget tile(
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(6)),
                     child: Image.network(
-                      "https://images.news18.com/ibnlive/uploads/2023/11/ipl_2024_live_updates-2023-11-a9b6336a8f392bf8b04374ba46914130.jpg?impolicy=website&width=640&height=480",
+                      img,
                       fit: BoxFit.cover,
                     ),
                   ),

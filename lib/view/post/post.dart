@@ -10,6 +10,10 @@ class post extends StatefulWidget {
 }
 
 class _postState extends State<post> {
+  bool addtitle = false;
+  bool addsubtitle = false;
+  bool image = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,20 +51,46 @@ class _postState extends State<post> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
-                tabtile("Add Heading"),
+                InkWell(
+                    onTap: () {
+                      setState(() {
+                        addtitle = true;
+                      });
+                    },
+                    child: tabtile("Add Heading")),
                 const SizedBox(
                   width: 5,
                 ),
-                tabtile("Add Artical"),
+                InkWell(
+                    onTap: () {
+                      setState(() {
+                        addsubtitle = true;
+                      });
+                    },
+                    child: tabtile("Add Artical")),
                 const SizedBox(
                   width: 5,
                 ),
-                tabtile("Add Media")
+                InkWell(
+                    onTap: () {
+                      setState(() {
+                        image = true;
+                      });
+                    },
+                    child: tabtile("Add Media"))
               ],
             ),
+            SizedBox(
+              height: 20,
+            ),
+            addtitle == true ? text1("TITLE") : textve1("TITLE"),
+            addsubtitle == true ? text1("SUBTITLE") : textve1("SUBTITLE"),
+            image == true ? text1("MEDIA") : textve1("MEDIA"),
           ],
         ),
       ),

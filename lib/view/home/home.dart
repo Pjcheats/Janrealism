@@ -28,6 +28,10 @@ class _homeState extends State<home> {
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKZg4mRksYG1rtqUxLTmDv0vvqtxCN9pAEpmqNwQmgSw&s"),
               ),
               tile(
+                  "125 years after Haryana farmer  1.6 ",
+                  " acres  for Rs 90 get back to family",
+                  "https://images.indianexpress.com/2024/04/farmersss.jpg?w=210"),
+              tile(
                   "Need to find the address issues",
                   "of competitive exam aspirants: Sharad Pawar",
                   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRON9FAt-yz7crgmRbfRlLA4jgDAtKRttx34MY3rqiwxA&s"),

@@ -30,6 +30,14 @@ dependencies:
   crypto: ^3.0.3
   get: ^4.6.6
   google_nav_bar: ^5.0.6
+  flutter_animate: ^4.5.0
+  flutter_launcher_icons: "^0.9.0"
+
+flutter_icons:
+  image_path: "assets/app-icon.png"
+  android: true
+  ios: true
+
 
 dev_dependencies:
   flutter_test:
