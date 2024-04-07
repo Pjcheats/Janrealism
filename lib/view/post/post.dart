@@ -10,27 +10,87 @@ class post extends StatefulWidget {
 }
 
 class _postState extends State<post> {
+  bool addtitle = false;
+  bool addsubtitle = false;
+  bool image = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        automaticallyImplyLeading: false,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(width: 120, child: Image.asset("assets/logo.png")),
+            Row(
+              children: [
+                const Icon(
+                  size: 25,
+                  Icons.search,
+                  color: MyColors.color2,
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.notifications,
+                    color: MyColors.color2,
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
-                tabtile("Add Heading"),
-                SizedBox(
+                InkWell(
+                    onTap: () {
+                      setState(() {
+                        addtitle = true;
+                      });
+                    },
+                    child: tabtile("Add Heading")),
+                const SizedBox(
                   width: 5,
                 ),
-                tabtile("Add Artical"),
-                SizedBox(
+                InkWell(
+                    onTap: () {
+                      setState(() {
+                        addsubtitle = true;
+                      });
+                    },
+                    child: tabtile("Add Artical")),
+                const SizedBox(
                   width: 5,
                 ),
-                tabtile("Add Media")
+                InkWell(
+                    onTap: () {
+                      setState(() {
+                        image = true;
+                      });
+                    },
+                    child: tabtile("Add Media"))
               ],
             ),
+            SizedBox(
+              height: 20,
+            ),
+            addtitle == true ? text1("TITLE") : textve1("TITLE"),
+            addsubtitle == true ? text1("SUBTITLE") : textve1("SUBTITLE"),
+            image == true ? text1("MEDIA") : textve1("MEDIA"),
           ],
         ),
       ),
@@ -38,7 +98,7 @@ class _postState extends State<post> {
         onPressed: () {},
         backgroundColor: MyColors.color2,
         child: const Icon(
-          Icons.post_add,
+          Icons.add,
           color: Colors.white,
         ),
       ),
@@ -51,7 +111,7 @@ Widget tabtile(
 ) {
   return Container(
     height: 30,
-    decoration: BoxDecoration(
+    decoration: const BoxDecoration(
         color: MyColors.color2,
         borderRadius: BorderRadius.all(Radius.circular(6))
         //border: Border.all(color: MyColors.color2, width: 1),

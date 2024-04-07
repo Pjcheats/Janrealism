@@ -26,6 +26,18 @@ dependencies:
   page_transition: ^2.1.0
   firebase_core: ^2.28.0
   cloud_firestore: ^4.16.0
+  uuid: ^4.3.3
+  crypto: ^3.0.3
+  get: ^4.6.6
+  google_nav_bar: ^5.0.6
+  flutter_animate: ^4.5.0
+  flutter_launcher_icons: "^0.9.0"
+
+flutter_icons:
+  image_path: "assets/app-icon.png"
+  android: true
+  ios: true
+
 
 dev_dependencies:
   flutter_test:
